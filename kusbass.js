@@ -13,13 +13,13 @@ kusbass.addEventListener('click', function(event) {
     // kusbass.src = 'https://kovich33.github.io/HTML5game_test/kusbass/res/M0003.png'
     setTimeout(setspriteback, 50)
 
-    if (count >= 3) {
+    if (count >= 50) {
         kusbass.src = 'res/img/kusbass02.png'
     }
-    if (count >= 5) {
+    if (count >= 150) {
         kusbass.src = 'res/img/kusbass03.png'
     }
-    if (count >= 8) {
+    if (count >= 250) {
         kusbass.src = 'res/img/kusbass04.png'
     }
 });
