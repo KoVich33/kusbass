@@ -10,7 +10,6 @@ kusbass.addEventListener('click', function(event) {
     counterElement.textContent = ` ${count}`;
     kusbass.style.width = '360px'
     snd_click.play()
-    // kusbass.src = 'https://kovich33.github.io/HTML5game_test/kusbass/res/M0003.png'
     setTimeout(setspriteback, 50)
 
     if (count >= 50) {
