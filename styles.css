@@ -11,7 +11,7 @@ body {
     text-align: center;
 }
 
-#image {
+#kusbass {
     width: 512px;
     height: 512px;
     user-select: none;
@@ -19,6 +19,29 @@ body {
     -webkit-user-select: none;
     -webkit-user-drag: none;
     -ms-user-select: none;
+    animation-name: kusbass-click;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+    /* animation: kusbass-click 0.3s; */
+}
+
+@keyframes click {
+    0% {
+        width: 512px;
+        height: 512px;
+    }
+
+    50% {
+        rotate: 25deg;
+        width: 400px;
+        height: 512px;
+    }
+
+    100% {
+        width: 512px;
+        height: 512px;
+    }
 }
 
 #counter {
@@ -33,3 +56,4 @@ body {
     -moz-user-select: none;
     -webkit-user-select: none;
     }
+
