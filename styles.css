@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Oswald:wght@200..700&display=swap');
+
 body {
     display: flex;
     justify-content: center;
@@ -12,8 +14,8 @@ body {
 }
 
 #kusbass {
-    width: 512px;
-    height: 512px;
+    width: 80%;
+    height: auto;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -47,7 +49,7 @@ body {
 #counter {
     font-size: 72px;
     margin-bottom: 10px;
-    font-family: 'Impact', serif;
+    font-family: "Oswald", serif;
     color: #241d01;
 }
 
