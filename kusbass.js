@@ -15,19 +15,31 @@ kusbass.addEventListener('click', function(event) {
     counterElement.textContent = ` ${count}`;
     // setCookie("score","kusbass", 365)
     kusbass.style.animation = "click 0.3s";
-    snd_click.play()
+    snd_click.play() 
     // kusbass.src = 'https://kovich33.github.io/HTML5game_test/kusbass/res/M0003.png'
     setCookie("score", count, 365)
     setTimeout(setspriteback, 80)
 
-    if (count >= 3) {
+    if (count >= 50) {
         kusbass.src = 'res/img/kusbass02.png'
     }
-    if (count >= 5) {
+    if (count >= 100) {
         kusbass.src = 'res/img/kusbass03.png'
     }
-    if (count >= 8) {
+    if (count >= 200) {
         kusbass.src = 'res/img/kusbass04.png'
+    }
+    if (count >= 300) {
+        kusbass.src = 'res/img/kusbass05.png'
+    }
+    if (count >= 400) {
+        kusbass.src = 'res/img/kusbass06.png'
+    }
+    if (count >= 500) {
+        kusbass.src = 'res/img/kusbass07.png'
+    }
+    if (count >= 600) {
+        kusbass.src = 'res/img/kusbass08.png'
     }
 });
 
