@@ -28,6 +28,10 @@ body {
     /* animation: kusbass-click 0.3s; */
 }
 
+#btn_menu {
+    
+}
+
 @keyframes click {
     0% {
         width: 512px;
