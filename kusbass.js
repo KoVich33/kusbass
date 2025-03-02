@@ -10,7 +10,7 @@ counterElement.textContent = ` ${count}`;
 //sound
 const snd_click = new Audio('res/sound/kusbass_res_0001.ogg')
 
-kusbass.addEventListener('click', function(event) {
+kusbass.addEventListener('touchstart', function(event) {
     count += 1;
     counterElement.textContent = ` ${count}`;
     // setCookie("score","kusbass", 365)
