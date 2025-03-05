@@ -44,19 +44,21 @@ body {
 
 @keyframes click {
     0% {
-        width: 512px;
-        /*height: 512px */
+        width: 80%;
+        height: auto;
+        rotate: 0deg;
     }
 
     50% {
         rotate: 25deg;
-        /*width: 400px;
-        height: 512px;*/
+        width: 75%;
+        height: 85%;
     }
 
     100% {
-        /*width: 512px;
-        height: 512px;*/
+        width: 80%;
+        height: auto;
+        rotate: 0deg;
     }
 }
 
