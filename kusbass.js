@@ -1,6 +1,8 @@
 let count = 0;
+let changecout = 0;
 const counterElement = document.getElementById('counter');
 const kusbass = document.getElementById('kusbass');
+let kuzbasimg = '';
 
 count = Number(getCookie("score"))
 
@@ -10,7 +12,7 @@ counterElement.textContent = ` ${count}`;
 //sound
 const snd_click = new Audio('res/sound/kusbass_res_0001.ogg')
 
-kusbass.addEventListener('touchstart', function(event) {
+kusbass.addEventListener('click', function(event) {
     count += 1;
     counterElement.textContent = ` ${count}`;
     // setCookie("score","kusbass", 365)
@@ -19,32 +21,57 @@ kusbass.addEventListener('touchstart', function(event) {
     // kusbass.src = 'https://kovich33.github.io/HTML5game_test/kusbass/res/M0003.png'
     setCookie("score", count, 365)
     setTimeout(setspriteback, 80)
-
-    if (count >= 50) {
-        kusbass.src = 'res/img/kusbass02.png'
-    }
-    if (count >= 100) {
-        kusbass.src = 'res/img/kusbass03.png'
-    }
-    if (count >= 200) {
-        kusbass.src = 'res/img/kusbass04.png'
-    }
-    if (count >= 300) {
-        kusbass.src = 'res/img/kusbass05.png'
-    }
-    if (count >= 400) {
-        kusbass.src = 'res/img/kusbass06.png'
-    }
-    if (count >= 500) {
-        kusbass.src = 'res/img/kusbass07.png'
-    }
-    if (count >= 600) {
-        kusbass.src = 'res/img/kusbass08.png'
+    changecout += 1;
+    //console.log(getRandomCatImage().catImageUrl);
+    if (changecout == 50) {
+        changecout = 0;
+        getRandomCatImage()
+        setTimeout(setRandomCatImage, 500)
+        function setRandomCatImage() {
+            kusbass.src = kuzbasimg
+            console.log(kuzbasimg)
+        }
+        
+        
     }
 });
 
+    async function getRandomCatImage() {
+        const apiUrl = 'https://api.thecatapi.com/v1/images/search';
+        
+        try {
+          const response = await fetch(apiUrl);
+          if (!response.ok) {
+            throw new Error('Ошибка при запросе к API');
+          }
+          const data = await response.json();
+          
+          if (data && data.length > 0) {
+            const catImageUrl = data[0].url;
+            console.log('Ссылка на изображение кота:', catImageUrl);
+            kuzbasimg = catImageUrl;
+            return catImageUrl;
+          } else {
+            throw new Error('Нет данных о котах');
+          }
+        } catch (error) {
+          console.error('Произошла ошибка:', error.message);
+          return null;
+        }
+      }
+      
+      getRandomCatImage()
+        .then(url => {
+          if (url) {
+            const imgElement = document.createElement('img');
+            kusbass.src = url;
+            document.body.appendChild(imgElement);
+          }
+        });
+
 function setspriteback() {
     kusbass.style.width = '512px'
+    kusbass.style.height = '512px'
     kusbass.style.animation = "";
 }
 

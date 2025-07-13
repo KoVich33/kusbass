@@ -1,3 +1,5 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Oswald:wght@200..700&display=swap');
 
 body {
@@ -12,8 +14,8 @@ body {
 }
 
 #kusbass {
-    width: 80%;
-    height: auto;
+    width: 512px;
+    height: 512px;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -44,20 +46,14 @@ body {
 
 @keyframes click {
     0% {
-        width: 80%;
-        height: auto;
         rotate: 0deg;
     }
 
     50% {
         rotate: 25deg;
-        width: 75%;
-        height: 85%;
     }
 
     100% {
-        width: 80%;
-        height: auto;
         rotate: 0deg;
     }
 }
