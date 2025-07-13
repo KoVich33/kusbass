@@ -31,8 +31,6 @@ kusbass.addEventListener('click', function(event) {
             kusbass.src = kuzbasimg
             console.log(kuzbasimg)
         }
-        
-        
     }
 });
 
@@ -70,8 +68,8 @@ kusbass.addEventListener('click', function(event) {
         });
 
 function setspriteback() {
-    kusbass.style.width = '512px'
-    kusbass.style.height = '512px'
+    kusbass.style.width = '128px'
+    kusbass.style.height = '128px'
     kusbass.style.animation = "";
 }
 
